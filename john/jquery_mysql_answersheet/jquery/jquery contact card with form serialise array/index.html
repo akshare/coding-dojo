@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#sample_form").submit(function(){
+				var form = $(this);
+				var form_data = form.serializeArray();
+				
+				user_data = "<tr>";
+
+				for(ctr = 0; ctr < form_data.length; ctr++)
+				{
+					user_data += "<td>"+ form_data[ctr].value +"</td>";
+				}
+
+				user_data += "</tr>";
+
+				$("#user").children("tbody").append(user_data);
+
+				return false;
+			});
+		});
+	</script>
+</head>
+<body>
+	<form id="sample_form" action="process.php" method="post">
+		<input type="text" name="first_name" placeholder="First Name"/>
+		<input type="text" name="last_name" placeholder="Last Name"/>
+		<input type="text" name="email" placeholder="Email Address"/>
+		<input type="submit" value="Submit">
+	</form>
+	<table id="user">
+		<thead>
+			<tr>
+				<th>Email</th>
+				<th>Firstname</th>
+				<th>Lastname</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+</body>
+</html>

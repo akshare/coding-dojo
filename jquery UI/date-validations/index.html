@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Jquery UI - Date Picker validations</title>
+		<meta type="description" content="jquery UI Date Picker + validations">
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+		
+		<style type="text/css">
+			.red{
+				color: red;
+			}
+		</style>
+
+		<script>
+			//Jquery UI
+			$(document).ready(function(){
+			
+				function formValidation(name,date){
+					if((name == "") || (date == "")){
+						
+						alert("You have missing fields!");
+						
+						if(name == ""){
+							$("#name").after("<br/><span class='red'>Please enter name</span>");
+							$(".red").fadeOut(3000);
+							$("#name").focus();
+						}
+						if(date == ""){
+							$("#date").after("<br/><span class='red'>Please enter date</span>");
+							$(".red").fadeOut(3000);
+							$("#name").focus();
+						}
+					}
+					else{
+						alert("Registration submitted: " + name + " " + date);
+					}
+				}
+
+				$("#date").datepicker();
+
+				$("#registration").submit(function(){
+					var name=$("#name").val();
+					var date=$("#date").val();
+					formValidation(name,date);
+					return false;
+				});
+
+			});
+		</script>
+
+	</head>
+	<body>
+		<h1>Coding Dojo - Registration</h1>
+		<form action="foo.php" method="post" id="registration">
+			<label for="date">Select Date: </label><br />
+			<input type="text" name="date" id="date"><br /><br/>
+			<label for="name">Enter Name:</label><br />
+			<input type="text" name="name" id="name"><br /><br/>
+			<input type="submit" name="submit" id="submit" value="Register">
+		</form>
+	</body>
+</html>

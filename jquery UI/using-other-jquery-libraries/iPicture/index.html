@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="en">
+		<title>IPicture Test</title>
+		<meta type="description" content="Ipicture Test">
+		
+		<link rel="stylesheet" type="text/css" media="screen" href="css/iPicture.css"/>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery.ipicture.js"></script> 
+
+		<script>
+			$(document).ready(function(){
+				 $( "#iPicture" ).iPicture(); 
+			});
+		</script>
+
+	</head>
+	<body>
+		<div id="iPicture">
+			<!-- Load iPicture -->
+			<div id="iPicture" data-interaction="hover">
+				<div class="ip_slide">
+			    	<img class="tooltipImg" src="images/audia6.jpg">
+					<div class="ip_tooltip ip_img32" style="top: 310px; left: 431px;" data-animationtype="ltr-slide" data-button="beadred" data-tooltipbg="bgblack" data-round="roundBgW">
+						<p>
+							<iframe style="margin-top:10px;" width="360" height="215" src="http://www.youtube.com/embed/1iAb_KxZq2A?wmode=transparent" frameborder="0" allowfullscreen></iframe>
+						</p>
+					</div>
+					<div class="ip_tooltip ip_img32" style="top: 400px; left: 200px;" data-animationtype="ltr-slide" data-button="beadred" data-tooltipbg="bgblack" data-round="roundBgW">
+						<p>
+							<iframe style="margin-top:10px;" width="360" height="215" src="http://www.youtube.com/embed/pwyF8NGBrIs?wmode=transparent" frameborder="0" allowfullscreen></iframe>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

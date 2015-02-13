@@ -1,0 +1,80 @@
+body{
+	font-family: Arial, sans-serif;
+	font-size: 13px;
+}
+#header{
+	border-bottom: 1px solid #cccccc;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+}
+#header h3{
+	float: left;	
+	padding: 0px;
+	margin: 0px;
+}
+#header form{
+	float: right;
+	padding: 0px;
+	margin: 0px;
+	display: inline;
+}
+.logout{
+	float:right;
+}
+.welcome{
+	float: right;
+	margin-right: 20px;
+}
+#wall-wrapper{
+	clear: both;
+	width: 700px;
+	margin: 0px auto;
+}
+
+.message_wrapper{
+	border: solid 1px #cccccc;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+.comments_wrapper{
+	margin-top:20px;
+	padding: 20px;
+	border: solid 1px #cccccc;
+}
+
+#wall-wrapper .id, #wall-wrapper .message_id, #wall-wrapper .comment_id{
+	display: none;
+}
+
+#wall-wrapper .first_name, #wall-wrapper .last_name, #wall-wrapper .message_date_updated, #wall-wrapper .comment_date_updated{
+	display: inline;
+	margin-right: 6px;
+	font-weight: bold;
+}
+
+#wall-wrapper .comments_wrapper .first_name, #wall-wrapper .comments_wrapper .last_name, #wall-wrapper .comments_wrapper .comment_date_updated{
+	font-weight: bold;
+}
+
+#wall-wrapper .message{
+	display: block;
+}
+
+.comments_wrapper .comment{
+	display: block;
+	padding: 0px 0px 10px 0px;
+}
+
+textarea{
+	width: 100%;
+	height: 100px;
+}
+
+button{
+	float:right;
+}
+
+button.delete_message{
+	float:none;
+}

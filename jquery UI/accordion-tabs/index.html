@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Jquery UI - Tabs + Accordion</title>
+		<meta type="description" content="Jquery UI - Tabs + Accordion assignment">
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.2/themes/redmond/jquery-ui.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+
+		<script>
+			//jquery UI
+			$(document).ready(function(){
+				$('#tabs').tabs();
+				$('#accordion').accordion();
+				
+				$("#toggle1").click(function(){
+ 					$(".a1").effect( "shake" );				
+ 				});
+ 				
+ 				$("#toggle2").click(function(){
+ 					$(".a2").effect( "shake" );				
+ 				});
+ 				
+ 				$("#toggle3").click(function(){
+ 					$(".a3").effect( "shake" );				
+ 				});
+			});
+		</script>
+
+	</head>
+	<body>
+		<div id="tabs">
+			<ul>
+				<li><a href="#tabs-1">Tab 1</a></li>
+				<li><a href="#tabs-2">Tab 2</a></li>
+				<li><a href="#tabs-3">Tab 3</a></li>
+			</ul>
+			<div id="tabs-1">
+				<div id="accordion">
+					<h3 id="toggle1">Accordion 1 Content</h3>
+					<div class="a1">
+						<p>Accordion div 1</p>
+					</div>
+					<h3 id="toggle2">Accordion 2 Content</h3>
+					<div class="a2">
+						<p>Accordion div 2</p>
+					</div>
+					<h3 id="toggle3">Accordion 3 Content</h3>
+					<div class="a3">
+						<p>Accordion div 3</p>
+					</div>
+				</div>
+			</div>
+			<div id="tabs-2">
+				<p>Tabs 2 Content</p>
+			</div>
+			<div id="tabs-3">
+				<p>Tabs 3 Content</p>
+			</div>
+		</div>
+	</body>
+</html>

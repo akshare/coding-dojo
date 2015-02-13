@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Jquery UI - Assignment</title>
+		<meta type="description" content="jquery UI basic 1 assignment">
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+
+		<style>
+			#sort-images{
+				list-style: none;
+			}
+		</style>
+
+		<script>
+		$(document).ready(function() {
+		$( "#sort-images" ).sortable();
+		$( "#sort-images" ).disableSelection();
+		});
+		</script>
+
+	</head>
+	<body>
+		<ul id="sort-images">
+			<li><img src="images/4.jpg"></li>
+			<li><img src="images/5.jpg"></li>
+			<li><img src="images/2.jpg"></li>
+			<li><img src="images/1.jpg"></li>
+			<li><img src="images/3.jpg"></li>
+		</ul>
+	</body>
+</html>

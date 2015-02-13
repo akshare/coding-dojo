@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+    <head>
+       <title>My Fake Blog</title>
+       <meta charset="utf-8"/>
+       <meta name="description" content="This is my assignment to create a fake html blog.">
+    </head>
+    <body>
+    	<h1>Fake Heading</h1>
+        <p>
+        	Paragraph 1 and <a href="http://google.com" target="_blank">Link to google</a>
+        </p>
+        <div>
+        	<h3>Div Section</h3>
+        	<p>Div tag containing ul, li, table, thead, td, tbody, tr, td, span.</p>
+            <ul>
+         	    <li>List 1</li>
+         	    <li>List 2</li>
+         	    <li>List 3</li>
+            </ul>
+            <h3>Table</h3>
+            <table>
+         	    <thead>
+         	    	<tr>
+         			    <th>Columns 1</th>
+         			    <th>Columns 2</th>
+         			    <th>Columns 3</th>
+         			</tr>	
+         	    </thead>
+         	    <tbody>
+         		    <tr>
+         			    <td>Column 1 - Row 1 - Data 1</td>
+         			    <td>Column 2 - Row 1 - Data 2</td>
+         			    <td>Column 3 - Row 1 - Data 3</td>
+         		    </tr>
+         		    <tr>
+         			    <td>Column 1 - Row 2 - Data 4</td>
+         			    <td>Column 2 - Row 2 - Data 5</td>
+         			    <td><span>Column 3 - Row 2 - Data 6 - contains span</span></td>
+         		    </tr>
+         	    </tbody>
+            </table>	
+        </div>
+        <div>
+        	<h3>Fake Form</h3>
+      	    <form name="fake-form" action="process.php" method="POST">
+      		    <label>
+      		    	Is this a fake form?
+      		        <select name="fakename">
+      			        <option value="Yes">Yes</option>
+      			        <option value="No">No</option>
+      		        </select>
+      	        </label>
+      	        <label>
+      	        	Enter your first name: 
+      	        	<input type="text" name="fname">
+      	        </label>
+      	        Are you a web developer?
+      	        <label>
+      	        	<input type="checkbox" name="fake" value="Yes">Yes
+      	        </label>	
+      	        <label>	
+      	        	<input type="checkbox" name="fake" value="No">No
+      	        </label>
+      	        	Are you a web designer?
+      	        <label>	
+      	        	<input type="radio" name="fakecheckbox" value="Yes">Yes
+      	        </label>
+      	        <label>	
+      	        	<input type="radio" name="fakecheckbox" value="No">No
+      	        </label>
+      	        <label>
+      	            <input type="submit" name="submitfakeform" value="Submit">
+      	        </label>
+      	    </form>
+        </div>	
+    </body>
+</html>

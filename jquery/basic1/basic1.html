@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Basic Jquery Functions 1</title>
+		<meta charset="utf-8">
+		<meta type="description" content="Basic Jquery Functions 1 for coding dojo assignment.">
+		<link rel="stylesheet" type="text/css" href="normalize.css" />
+		<link rel="stylesheet" type="text/css" href="basic1.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+		<!-- Begin Jquery -->
+		<script type="text/javascript">
+			$(document).ready(function(){
+				//add class red
+				$('.addClass button').click(function(){
+					$('.addClass p').addClass('red');
+				});
+				//add paragraph after element
+				$('.after button').click(function(){
+					$('.after .red').after('<p>Inserted 2nd paragraph.</p>');
+				});
+				//append sentence
+				$('.append button').click(function(){
+					$('.append p').append('.... appended sentence.');
+				});
+				//get attributes of element
+				$('.attr input').click(function(){
+					$('.attr p').after("<p>type = " + $('.attr input').attr('type') + "</p>");
+				});
+				//add before sentence
+				$('.before button').click(function(){
+					$('.before .red').before('<p>Paragraph added before original paragraph.</p>');
+				});
+				//add html
+				$('.html button').click(function(){
+					$('.html .h1').html('<h1>Replaced with h1 and new text.</h1>');
+				});
+				//add text
+				$('.text button').click(function(){
+					$('.text p').html('Previous text has been replace with new text.');
+				});
+				//get value of element
+				$('.val input').click(function(){
+					$('.val p').html('<p>Value = ' + $('.val input').val() + "</p>");
+				});
+				//toggle element
+				$('.toggle button').click(function(){
+					$('.toggle p').toggle();
+				});
+				//toggle show
+				$('.show p').hide();
+				$('.show button').click(function(){
+					$('.show p').show();
+				});
+				//toggle hide
+				$('.hide button').click(function(){
+					$('.hide p').hide();
+				});
+				//slide down
+				$('.slideDown button').click(function(){
+					$('.slideDown .show p').slideDown();
+				});
+				//slide up
+				$('.slideUp button').click(function(){
+					$('.hideSlide').slideUp().slideDown().fadeOut(5000);
+				});
+				//slideToggle
+				$('.slideToggle button').click(function(){
+					$('.slideToggleP').slideToggle();
+				});
+				//fadeOut
+				$('.fadeOut button').click(function(){
+					$('.fadeOut p').fadeOut();
+				});
+				//fadeIn
+				$('.fadeIn p').fadeOut();
+				$('.fadeIn button').click(function(){
+					$('.fadeIn p').fadeIn();
+				});
+				//focus
+				$('.focus button').click(function(){
+					$('.focus .focusme').focus();
+				});
+				//click
+				$('.click button').click(function(){
+					alert('You have finished Jquery Basic 1!');
+				});
+			});
+		</script>
+		<!-- End Jquery -->
+
+	</head>
+	<body>
+		<div id="outer_container">
+			<div class="addClass">
+				<button type="button">addClass</button>
+				<h3>addClass</h3>
+				<p>Click the button to add class "red" to this paragraph.</p>
+			</div>
+			<div class="after">
+				<button type="button">after</button>
+				<h3>after</h3>
+				<p class="red">Click the button to add a new paragraph after this paragraph.</p>
+			</div>
+			<div class="append">
+				<button type="button">append</button>
+				<h3>append</h3>
+				<p>Click the button to append text after this sentence.</p>
+			</div>
+			<div class="attr">
+				<input type="submit" value="Click Me">				
+				<h3>attr</h3>
+				<p>Click the button to get the type attributes of Click me input button.</p>
+			</div>
+			<div class="before">
+				<button type="button">before</button>
+				<h3>before</h3>
+				<p class="red">Click the button to add a new paragraph before this paragraph.</p>
+			</div>
+			<div class="html">
+				<button type="button">html</button>
+				<h3>html</h3>
+				<p class="h1">Click the button to replace this paragraph with a H1 tag.</p>
+			</div>
+			<div class="text">
+				<button type="button">text</button>
+				<h3>text</h3>
+				<p>Click the button to replace this sentence with a new sentence.</p>
+			</div>
+			<div class="val">
+				<input name="button_value" type="submit" value="Blue">
+				<h3>val</h3>
+				<p>Click the button to get the value of this element.</p>
+			</div>
+			<div class="toggle">
+				<button type="button">toggle</button>
+				<h3>toggle</h3>
+				<p>Click the button to show/hide this paragraph.</p>
+			</div>
+			<div class="show">
+				<button type="button">show</button>
+				<h3>show</h3>
+				<p>Now you see me.</p>
+			</div>
+			<div class="hide">
+				<button type="button">hide</button>
+				<h3>hide</h3>
+				<p>Click the button to hide this paragraph.</p>
+			</div>
+			<div class="slideDown">
+				<button type="button">slideDown</button>
+				<h3>slideDown</h3>
+				<p>Click the button to slide down this paragraph.</p>
+				<div class="show">
+					<p>this paragraph.</p>
+					<p>this paragraph.</p>
+					<p>this paragraph.</p>
+					<p>this paragraph.</p>
+					<p>this paragraph.</p>
+					<p>this paragraph.</p>
+					<p>this paragraph.</p>
+					<p>this paragraph.</p>
+					<p>this paragraph.</p>
+				</div>
+			</div>
+			<div class="slideUp">
+				<button type="button">slideUp</button>
+				<h3>slideUp</h3>
+				<p>Click the button to slide up this paragraph.</p>
+				<div class="hideSlide">
+					<p>this paragraph.</p>
+					<p>this paragraph.</p>
+					<p>this paragraph.</p>
+					<p>this paragraph.</p>
+					<p>this paragraph.</p>
+					<p>this paragraph.</p>
+					<p>this paragraph.</p>
+					<p>this paragraph.</p>
+					<p>this paragraph.</p>
+				</div>
+			</div>
+			<div class="slideToggle">
+				<button type="button">slideToggle</button>
+				<h3>slideToggle</h3>
+				<p>Click the button to display or hide this paragraph with a sliding motion.</p>
+				<div class="slideToggleP">
+					<p>this paragraph.</p>
+					<p>this paragraph.</p>
+					<p>this paragraph.</p>
+					<p>this paragraph.</p>
+					<p>this paragraph.</p>
+					<p>this paragraph.</p>
+					<p>this paragraph.</p>
+					<p>this paragraph.</p>
+					<p>this paragraph.</p>
+				</div>
+			</div>
+			<div class="fadeOut">
+				<button type="button">fadeOut</button>
+				<h3>fadeOut</h3>
+				<p>Click the button to fadeOut this paragraph.</p>
+			</div>
+			<div class="fadeIn">
+				<button type="button">fadeIn</button>
+				<h3>fadeIn</h3>
+				<p>Click the button to fadeIn this paragraph.</p>
+			</div>
+			<div class="focus">
+				<button type="button">focus</button>
+				<h3>focus</h3>
+				<input type="text">
+				This should be focus after you click the button <input class="focusme" type="text">
+			</div>
+			<div class="click">
+				<button type="button">click</button>
+				<h3>click</h3>
+				<p>Click the button to send an alert message.</p>
+			</div>
+		</div>
+	</body>
+</html>

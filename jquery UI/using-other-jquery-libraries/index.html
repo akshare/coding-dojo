@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>tubular, a YouTube Background Player jQuery Plugin | Sean McCambridge Design</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<!-- BEGIN tubular supporting files -->
+ 	<link rel="icon" type="image/png" href="jquery-tubular/media/layout/favicon.png" />
+	<link href="jquery-tubular/css/screen.css" rel="stylesheet" type="text/css" /> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript" charset="utf-8" src="jquery-tubular/js/jquery.tubular.1.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="jquery-tubular/js/index.js"></script>
+	<!-- END tubular supporting files -->
+
+	<!-- BEGIN gridster supporting files -->
+    <script src="ducksboard-gridster/dist/jquery.gridster.min.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="ducksboard-gridster/dist/jquery.gridster.css">
+	<!-- Load local QUnit (grunt requires v1.0.0 or newer). -->
+	<link rel="stylesheet" href="ducksboard-gridster/libs/qunit.css" media="screen">
+	<script src="ducksboard-gridster/libs/qunit.js"></script>
+	<!-- Load local lib and tests. -->
+	<script src="ducksboard-gridster/src/jquery.gridster.js"></script>
+	<!-- END gridster supporting files -->
+
+	<!-- BEGIN iPicture supporting files -->
+	<link rel="stylesheet" type="text/css" media="screen" href="iPicture/css/iPicture.css"/>
+	<script type="text/javascript" src="iPicture/js/jquery.ipicture.js"></script> 
+	<!-- END iPicture supporting files -->
+
+	<!-- BEGIN Basic styles for the page -->
+	<style>
+	    ul{
+	      list-style: none;
+	    }
+	    ul li{
+	      background-color: #cccccc;
+	    }
+	    .gridster{
+	    	width:400px;
+	    }
+	    .puzz{
+	    	width: 180px;
+	    	height: 140px;
+	    }
+  	</style>
+  	<!-- END Basic styles for the page -->
+
+  	<!-- jquery functions -->
+    <script>
+    	$(document).ready(function(){
+
+    		//tubular
+            $('#wrapper').tubular({videoId: 'fVsONlc3OUY'}); // where idOfYourVideo is the YouTube ID.
+
+            //gridster
+            $(".gridster ul").gridster({
+			    widget_margins: [1, 1],
+			    widget_base_dimensions: [180, 140]
+			});
+
+            //iPicture
+            $( "#iPicture" ).iPicture(); 
+    	});
+    </script>
+
+</head>
+<body>
+	<div id="wrapper" class="clearfix">
+		<div id="iPicture" data-interaction="hover">
+			<div class="ip_slide">
+				<div class="ip_tooltip ip_img32" style="top: 25px; left: 400px;" data-animationtype="ltr-slide" data-button="beadred" data-tooltipbg="bgblack" data-round="roundBgW">
+					<p>
+						An aurora[nb 1] is a natural light display in the sky (from the Latin word aurora, "sunrise" or the Roman goddess of dawn), predominantly seen in the high latitude (Arctic and Antarctic) regions.
+					</p>
+				</div>
+				<div class="ip_tooltip ip_img32" style="top: 25px; left: 600px;" data-animationtype="ltr-slide" data-button="beadred" data-tooltipbg="bgblack" data-round="roundBgW">
+					<p>
+						<iframe style="margin-top:10px;" width="360" height="215" src="http://www.youtube.com/embed/FcfWsj9OnsI?wmode=transparent" frameborder="0" allowfullscreen></iframe>
+					</p>
+				</div>
+			</div>
+		</div>	
+		<div id="main">
+			<p id="video-controls" class="black-65">Video controls:<br /><a href="#" class="tubular-play">Play</a> | <a href="#" class="tubular-pause">Pause</a> | <a href="#" class="tubular-volume-up">Volume Up</a> | <a href="#" class="tubular-volume-down">Volume Down</a> | <a href="#" class="tubular-mute">Mute</a></p>
+			<div class="gridster">
+				<ul>
+					<li data-row="1" data-col="1" data-sizex="1" data-sizey="1"><img class="puzz" src="iPicture/images/puzzle/1.jpg"></li>
+					<li data-row="2" data-col="2" data-sizex="1" data-sizey="1"><img class="puzz" src="iPicture/images/puzzle/3.jpg"></li>
+					<li data-row="3" data-col="3" data-sizex="1" data-sizey="1"><img class="puzz" src="iPicture/images/puzzle/2.jpg"></li>
+					<li data-row="1" data-col="1" data-sizex="1" data-sizey="1"><img class="puzz" src="iPicture/images/puzzle/5.jpg"></li>
+					<li data-row="2" data-col="2" data-sizex="1" data-sizey="1"><img class="puzz" src="iPicture/images/puzzle/6.jpg"></li>
+					<li data-row="3" data-col="3" data-sizex="1" data-sizey="1"><img class="puzz" src="iPicture/images/puzzle/9.jpg"></li>  
+					<li data-row="1" data-col="1" data-sizex="1" data-sizey="1"><img class="puzz" src="iPicture/images/puzzle/7.jpg"></li>
+					<li data-row="2" data-col="2" data-sizex="1" data-sizey="1"><img class="puzz" src="iPicture/images/puzzle/8.jpg"></li>
+					<li data-row="3" data-col="3" data-sizex="1" data-sizey="1"><img class="puzz" src="iPicture/images/puzzle/4.jpg"></li>
+				</ul>
+			</div> 
+		</div>
+	</div>
+</body>
+</html>

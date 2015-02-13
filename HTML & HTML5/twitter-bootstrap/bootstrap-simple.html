@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Twitter Bootstrap - Simple Example</title>
+		<meta name="description" content="A simple example of Twitter Bootstrap in action.">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/bootstrap-simple.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+		<!-- Jquery - This is needed for bootstrap javascript to work -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>		
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+			  <div class="col-md-4 col1"><p class="text-left text-primary">.col-md-4</p></div>
+			  <div class="col-md-4 col2"><p class="text-center text-success">.col-md-4</p></div>
+			  <div class="col-md-4 col3"><p class="text-right text-danger">.col-md-4</p></div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col1">4 cols</div>
+				<div class="col-md-4 col-md-offset-4 col2">.col-md-4 offset 4</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>col1</th>
+								<th>col2</th>
+								<th>col3</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>col1</td>
+								<td>col2</td>
+								<td>col3</td>
+							</tr>
+							<tr>
+								<td><button class="btn btn-default" type="submit">Default</button></td>
+								<td><button class="btn btn-primary" type="submit">Primary</button></td>
+								<td><button class="btn btn-success" type="submit">Success</button></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="col-md-4">
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>col1</th>
+								<th>col2</th>
+								<th>col3</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>col1</td>
+								<td>col2</td>
+								<td>col3</td>
+							</tr>
+							<tr>
+								<td><button class="btn btn-default" type="submit">Default</button></td>
+								<td><button class="btn btn-primary" type="submit">Primary</button></td>
+								<td><button class="btn btn-success" type="submit">Success</button></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="col-md-4">
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th>col1</th>
+								<th>col2</th>
+								<th>col3</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>col1</td>
+								<td>col2</td>
+								<td>col3</td>
+							</tr>
+							<tr>
+								<td><button class="btn btn-default" type="submit">Default</button></td>
+								<td><button class="btn btn-primary" type="submit">Primary</button></td>
+								<td><button class="btn btn-success" type="submit">Success</button></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<!-- Split button -->
+						<div class="btn-group">
+							<button type="button" class="btn btn-danger">Action</button>
+							<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+							    <span class="caret"></span>
+							    <span class="sr-only">Toggle Dropdown</span>
+							</button>
+							<ul class="dropdown-menu" role="menu">
+							    <li><a href="#">Action</a></li>
+							    <li><a href="#">Another action</a></li>
+							    <li><a href="#">Something else here</a></li>
+							    <li class="divider"></li>
+							    <li><a href="#">Separated link</a></li>
+						 	</ul>
+						</div>
+						<div class="jumbotron">
+							<h1>Hello, world!</h1>
+							<p>...</p>
+							<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+						</div>
+						<div class="alert alert-warning alert-dismissible" role="alert">
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<strong>Warning!</strong> Better check yourself, you're not looking too good.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
