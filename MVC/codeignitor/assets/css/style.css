@@ -1,0 +1,55 @@
+body{
+	font-family: arial;
+	font-size: 13px;
+}
+
+#wrapper{
+	width:700px;
+	margin: 0px auto;
+}
+
+.form{
+	border: solid 1px #cccccc;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.notice{
+	background: #cccccc;
+	color: red;
+	font-weight: bold;
+	padding: 10px;
+}
+
+label{
+	float: left;
+	width: 75px;
+	text-align: right;
+	margin-right: 1em;
+}
+
+input, textarea{
+	padding: 0px;
+	display: block;
+	width: 200px;
+	height: 20px;
+	margin-bottom: 10px;
+}
+
+input[type='submit']{
+	margin-left:88px;
+}
+
+textarea{
+	height: 100px;
+}
+
+table{
+	border: solid 1px #cccccc;
+	width: 100%;
+}
+
+table td{
+	border-bottom: solid 1px #cccccc;
+	padding:10px;
+}

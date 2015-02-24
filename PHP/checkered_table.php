@@ -39,29 +39,15 @@
 		//function checkered board
 		function checkered_board(){ 
 			$tr = NULL;
+			$bgcolor = NULL;
 			for($i=1; $i<=7; $i++){
 				//display rows
 				$td = NULL;
 				for($j=1; $j<=7; $j++){
-					if(($i % 2) == 0){                  //if row is ODD
-						if(($j % 2) != 0){				//if cell is odd, set colors to red
-							$bgcolor = "red";
-						}
-						else{                           //if cell is even, set color to blue
-							$bgcolor = "blue";	
-						}
-					}
-					else{								//if row is EVEN
-						if(($j % 2) == 0){				//if cell is even, set colors to red
-							$bgcolor = "red";
-						}
-						else{                           //if cell is odd, set color to blue
-							$bgcolor = "blue";	
-						}
-					}
-					$td .= "<td class='" . $bgcolor . "'></td>";                  //display cells
+					$bgcolor = ($i+$j) % 2 ? 'red':'blue';
+					$td .= "<td class='" . $bgcolor . "'></td>";
 				}
-				$tr .= "<tr>". $td ."</tr>";             //display rows
+				$tr .= "<tr>". $td ."</tr>";
 			}
 			echo "<table cellspacing='0'>". $tr ."</table>";
 		}
