@@ -1,0 +1,102 @@
+<html>
+	<head>
+		<title>Javascript Fundamentals - Part II</title>
+
+		<script>
+
+			var person = {
+				name: 'Ahmed',
+				distance_travelled: 0,
+				say_name: 
+					function(){
+						alert(person.name);
+					},
+				say_something: 
+					function(say_something_value){ 
+						alert(person.name+' says '+say_something_value); 
+					},
+				walk: 
+					function(){
+						var walked = 0;
+				        alert(person.name+' is walking');
+				        walked = walked + 3;
+				        return walked;
+					},
+				run: 
+					function(){
+						var ran = 0;
+						alert(person.name+' is running');
+					 	ran = ran + 10;
+					 	return ran;
+					},
+				crawl: 
+					function(){
+						var crawled = 0;
+						alert(person.name+' is crawling');
+						crawled = crawled + 1;
+						return crawled;
+					},
+				dosomething: 
+					function(){
+						var random_number = Math.floor(Math.random() * 3) + 1;
+						if(random_number === 1){
+							return person.walk();
+						}
+						else if(random_number === 2){
+							return person.run();
+						}
+						else if(random_number === 3){
+							return person.crawl();
+						}
+					},
+				fly:
+					function(x,y){
+						var rand = function(min, max) {
+    						return Math.random() * (max - min) + min;
+						};
+ 
+						var getRandomItem = function(list, weight) {
+						    var total_weight = weight.reduce(function (prev, cur, i, arr) {
+						        return prev + cur;
+						    });
+						     
+						    var random_num = rand(0, total_weight);
+						    var weight_sum = 0;
+						    //console.log(random_num)
+						     
+						    for (var i = 0; i < list.length; i++) {
+						        weight_sum += weight[i];
+						        weight_sum = +weight_sum.toFixed(2);
+						         
+						        if (random_num <= weight_sum) {
+						            return list[i];
+						        }
+						    }
+						     
+						    // end of function
+						};
+	 
+						var list = [x, y];
+						var weight = [0.3, 0.7];
+						var random_item = getRandomItem(list, weight);
+
+						random_item();
+					}
+			}
+
+			//person.say_something("Hello All!");
+
+			//person.run();
+
+			//person.dosomething();
+
+			person.fly( function() { alert('eating ice cream!'); } , function() { alert('crying at home...'); } );
+
+
+		</script>
+
+	</head>
+	<body>
+
+	</body>
+</html>

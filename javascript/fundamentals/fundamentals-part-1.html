@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>Javascript Fundamentals</title>
+		<script>
+			
+			function array_example(){
+				x = [3,5,'Dojo', 'rocks', {name: 'Michael', title: 'Sensei'}];
+				x.push(100);
+				x.push([500,600,700]);
+
+				for(key in x){
+					var value_type = typeof(x[key]);
+					var obj = x[key];
+					
+					console.log(obj + " : " + value_type);
+					
+					if(value_type === "object"){
+						for(var prop in obj){
+							var obj_value_type = typeof(obj[prop]);
+							console.dir(obj[prop] + " : "+ obj_value_type);
+						}
+					}
+				}
+			}
+
+			function simple_addition(end_number){
+				var x=1;
+
+				for(i=1; i<=end_number; i++){
+					x = x+i;
+					//console.log(x);
+				}
+			}
+
+			function time_difference(){
+				var d = new Date();
+				var n = d.getTime();
+				console.log('Start Time: '+n);
+
+				simple_addition(100000);
+
+ 				var e = new Date();
+				var m = e.getTime();
+				console.log('End Time: '+m);
+
+				var final_time = m-n;
+
+				console.log('Time Difference: '+final_time);
+
+			}
+
+			//array_example();
+			//simple_addition(500);
+
+			time_difference();
+
+		</script>
+	</head>
+</html>
