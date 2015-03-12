@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>Javascript Assignment - Callbacks II</title>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		
+		<script>
+			$(document).ready(function(){
+
+				function send_something_via_ajax(x){
+
+					function output(){
+				    	var output = "<h1>Hi There!</h1>";
+				    	return output;
+					}
+
+					return x(output());
+				}
+
+				// log the output of the http response in the console (e.g. console.log('Output from the first call', output);
+				a = function(x){
+					console.log(x);
+					send_something_via_ajax(b);
+				}
+
+				//append the output of the http response directly in the body.
+				b = function(x){
+					$('body').append(x);
+					$('body h1').fadeOut(3000,function(){
+						send_something_via_ajax(c);
+					});
+				}
+
+				//fadeOut the current html body and then append a new message that says 'third method call success!'.
+				c = function(x){
+					$('body h1').fadeOut(3000);
+					$('body').append('third method call success!');
+				}
+
+				send_something_via_ajax(a);
+
+			});
+		</script>
+
+	</head>
+	<body>
+	</body>
+</html>

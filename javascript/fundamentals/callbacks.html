@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title>Javascript Assignment - Callbacks</title>
+		
+		<script>
+
+			var randomName = function (){
+				var name = ['George', 'Mike', 'Joe', 'Ninja'];
+				var name_index = name.length - 1;
+				var random_generated_name = Math.floor((Math.random()*name_index));
+
+				return name[random_generated_name];
+			}
+			var say = function(x) {
+			  console.log('Say ', x);
+			}
+			var yell = function(x) {
+			  console.log('Yell ', x);
+			}
+			var eat = function(x) {
+			  console.log('Eat ', x);
+			}
+			var roll = function(x) {
+			  console.log ('Roll ', x);
+			}
+
+			function random_function(a, x, y, z, f){
+				var random_call_back = Math.floor((Math.random()*4)+1);
+
+				switch(random_call_back){
+					case 1:
+						x(a);
+						break;
+					case 2:
+						y(a);
+						break;
+					case 3:
+						z(a);
+						break;
+					case 4:
+						f(a);
+						break;
+				}
+
+			}
+
+			random_function(randomName(), say, yell, eat, roll);
+
+		</script>
+	</head>
+	<body>
+	</body>
+<html>

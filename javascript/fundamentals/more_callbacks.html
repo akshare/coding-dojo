@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>Javascript Assignment - Callbacks II</title>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		
+		<script>
+			function MainFunction(x){
+				var random_number = Math.random();
+				var random_string = Math.random().toString(36).slice(2);
+				alert(x());
+				return x(random_number, random_string);
+			}
+
+			MainFunction(
+				function(a, b) { 
+					console.log('hello world '+ a + ' : ' +b); 
+					return 777;
+				}
+			);
+		</script>
+
+	</head>
+	<body>
+	</body>
+</html>
