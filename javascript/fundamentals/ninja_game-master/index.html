@@ -1,0 +1,122 @@
+<html>
+<head>
+	<title>Character Game</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<style>
+		#character{
+			width: 59px;
+			height: 86px;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="character" style="position:absolute; top:0px; left:0px;"></div>
+
+	<script>
+
+	$("#character").css("background", "url(img/right1.png)");
+
+	/*function gameLoop()
+	{
+		if(direction == "left"){
+			$('#character').css(direction, x+"px");
+		}
+		else if(direction == "top"){
+			$('#character').css(direction, y+"px");
+		}
+	}*/
+
+	//setInterval(gameLoop, 150);
+
+	var x=0, y=0;
+	document.onkeydown = function(e)
+	{
+		if(e.keyCode == 37)
+		{
+			x = x-10;
+			img = $("#character").css("background");
+
+			if(x < 0){
+				alert("stop!");
+				$("#character").css({background:"url(img/left1.png)",left:"0px"});
+			}
+			else{
+				if(img == "rgba(0, 0, 0, 0) url(http://localhost:8888/ninja_game-master/img/left1.png) repeat scroll 0% 0% / auto padding-box border-box")
+				{
+					$("#character").css({background:"url(img/left2.png)",left:x+"px"});
+				}
+				else{
+					$("#character").css({background:"url(img/left1.png)",left:x+"px"});
+				}
+			}
+
+		}
+		else if(e.keyCode == 39)
+		{
+			x = x+10;
+			img = $("#character").css("background");
+
+			console.log(x);
+
+			if(x > 500){
+				alert("stop!");
+				$("#character").css({background:"url(img/right1.png)",left:"500px"});
+			}
+			else{
+				if(img == "rgba(0, 0, 0, 0) url(http://localhost:8888/ninja_game-master/img/right1.png) repeat scroll 0% 0% / auto padding-box border-box")
+				{
+					$("#character").css({background:"url(img/right2.png)",left:x+"px"});
+				}
+				else{
+					$("#character").css({background:"url(img/right1.png)",left:x+"px"});
+				}
+			}
+		}
+		else if(e.keyCode == 40)
+		{
+			y = y+10;
+			img = $("#character").css("background");
+
+			if(y > 500){
+				alert("stop!");
+				$("#character").css({background:"url(img/down1.png)",top:"500px"});
+			}
+			else{
+				if(img == "rgba(0, 0, 0, 0) url(http://localhost:8888/ninja_game-master/img/down1.png) repeat scroll 0% 0% / auto padding-box border-box")
+				{
+					$("#character").css({background:"url(img/down2.png)",top:y+"px"});
+				}
+				else{
+					$("#character").css({background:"url(img/down1.png)",top:y+"px"});
+				}
+			}
+		}
+		else if(e.keyCode == 38)
+		{
+			y = y-10;
+			img = $("#character").css("background");
+
+			if(y < 0){
+				alert("stop!");
+				$("#character").css({background:"url(img/top1.png)",top:"0px"});
+			}
+			else{
+				if(img == "rgba(0, 0, 0, 0) url(http://localhost:8888/ninja_game-master/img/top1.png) repeat scroll 0% 0% / auto padding-box border-box")
+				{
+					$("#character").css({background:"url(img/top2.png)",top:y+"px"});
+				}
+				else{
+					$("#character").css({background:"url(img/top1.png)",top:y+"px"});
+				}
+			}
+		}
+
+		console.log(e.keyCode, x, y);
+	}
+
+	//console.log(document);
+	</script>
+
+</body>
+</html>
